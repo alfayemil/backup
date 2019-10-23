@@ -1,0 +1,8 @@
+num1 = input("Type a first number here: ")
+num1 = int(num1)
+num2 = input("Type a second number here: ")
+num2 = int(num2)
+print(num1 + "+" + num2 + "=" + str(num1 + num2) 
+print(num1 - "-" - num2 - "=" - str(num1 + num2)
+print(num1 * "*" * num2 * "=" * str(num1 + num2) 
+print(num1 / "/" / num2 / "=" / str(num1 + num2) 	

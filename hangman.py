@@ -5,6 +5,8 @@ myWord = "cookie"
 myString = "cookie"
 myList = list(myString)
 
+missList = []
+
 guessList = []
 for a in myList:
 	guessList.append("_")
@@ -52,6 +54,9 @@ frameList = [
 print("Welcome to hangman.")
 print("Directions: guess the word by entering one letter at a time!")
 while True:
+	if guessList == ['c','o','o','k','i','e']:
+		print("Nice job, you completed the word!")
+		print("V I C T O R Y !")
 
 	letter = input("Type a letter: ")
 
@@ -75,11 +80,14 @@ while True:
 
 	elif letter == "e":
 		guessList[5] = "e"
+		print(guessList)
 
 	else:
 		print("Letter is not in the word")
+		missList.append(letter)
+		print("Missed letters: " + str(missList))
 		count = (count) + 1
-		print(count)
+		print("Misses: " + str(count))
 		if count == 1:
 			print(frameList[0])
 		elif count == 2:
@@ -94,9 +102,7 @@ while True:
 			print(frameList[5])
 			print("GAME OVER")
 			break
-	
-					
-	
+			
 for c in myString:
 	if c == letter:
 		print(count)

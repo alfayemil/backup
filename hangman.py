@@ -51,12 +51,29 @@ frameList = [
 
 ]
 
+mins = 0
+
 print("Welcome to hangman.")
 print("Directions: guess the word by entering one letter at a time!")
+print("You have 3 minutes to guess the word. If the timer runs out, YOU LOSE.")
+start = input("Do you want to start the game?(If yes type 'yes'): ")	
+	
+if start == "yes":
+		while mins != 3:
+			time.sleep(60)
+			mins += 1
+			pass
+		print("looks like you ran outta time.")
+
 while True:
+
+
+
+
 	if guessList == ['c','o','o','k','i','e']:
 		print("Nice job, you completed the word!")
 		print("V I C T O R Y !")
+		break
 
 	letter = input("Type a letter: ")
 
